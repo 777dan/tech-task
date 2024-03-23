@@ -1,0 +1,11 @@
+.images {
+    position: relative;
+    width: 300px;
+}
+
+#text {
+    /* transform: rotate(180deg); */
+    display: inline-block;
+    transition: 1s;
+    opacity: 0;
+}
