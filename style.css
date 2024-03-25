@@ -17,6 +17,7 @@
 }
 
 .blocks {
+    position: relative;
     width: 100px;
     height: 100px;
     margin: 8px;
@@ -24,4 +25,12 @@
     color: #ffffff;
     text-align: center;
     display: inline-block;
+}
+
+.products {
+    width: 100px;
+    height: 100px;
+    background-color: #bee19a;
+    margin: 16px;
+    cursor: pointer;
 }

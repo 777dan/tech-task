@@ -10,7 +10,7 @@ const genBlocks = () => {
         numbers[randNum] = temp;
     }
     for (let i = 1; i <= 5; i++) {
-        let block = `<div class='blocks' id='block${numbers[i - 1]}' draggable="true" ondragstart="drag(event)" data-id='${numbers[i - 1]}'>${numbers[i - 1]}</div>`;
+        let block = `<div class='blocks' id='block${numbers[i - 1]}' style='left:0;' draggable="true" ondragstart="drag(event)" data-id='${numbers[i - 1]}'>${numbers[i - 1]}</div>`;
         blocks.innerHTML += (block);
     }
 }
@@ -44,6 +44,15 @@ submitButton.addEventListener('click', () => {
     }
     if (isOrderTrue) {
         alert("OK");
+        let interval = setInterval(() => {
+            for (let i = 0; i < field.children.length; i++) {
+                console.log(field.children[i].style.left)
+                field.children[i].style.left = `${(parseInt(field.children[i].style.left)) + 1}px`;
+            }
+        }, 10);
+        setTimeout(() => {
+            clearInterval(interval);
+        }, 2000);
     } else {
         alert("Error");
     }
