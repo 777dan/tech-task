@@ -3,11 +3,11 @@
     width: 300px;
 }
 
-#text {
+#text>span {
     /* transform: rotate(180deg); */
     display: inline-block;
     transition: 1s;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 #field {

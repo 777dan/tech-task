@@ -1,15 +1,20 @@
-const text = document.querySelector("#text");
+const text = document.querySelector("#text").children;
+console.log(text[0].innerHTML)
 let fadeIn = true;
 
 function animateText() {
     if (fadeIn) {
-        text.style.transform = "rotate(0deg)";
-        text.style.opacity = 1;
-        fadeIn = false;
+        for (let i = 0; i < text.length; i++) {
+            text[i].style.transform = "rotate(0deg)";
+            text[i].style.opacity = 1;
+            fadeIn = false;
+        }
     } else {
-        text.style.transform = "rotate(180deg)";
-        text.style.opacity = 0;
-        fadeIn = true;
+        for (let i = 0; i < text.length; i++) {
+            text[i].style.transform = "rotate(180deg)";
+            text[i].style.opacity = 0;
+            fadeIn = true;
+        }
     }
 }
 
